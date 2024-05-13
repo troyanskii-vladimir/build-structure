@@ -1,6 +1,15 @@
+import Header from '../../componets/header/header';
+
+
 function EventsPage(): JSX.Element {
+
   return (
-    <h2>Events</h2>
+    <div className="wrapper">
+      <Header />
+      <main>
+        <h2>Events</h2>
+      </main>
+    </div>
   );
 }
 

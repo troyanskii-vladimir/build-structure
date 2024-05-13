@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { AppRoute } from "../../config";
 import MainPage from "../../pages/main/main";
 import BlogPage from "../../pages/blog/blog";
 import EventsPage from "../../pages/events/events";
 import Page404 from "../../pages/404/404";
-import { HelmetProvider } from "react-helmet-async";
+import AboutPage from "../../pages/about/about";
 
 function App(): JSX.Element {
   return (
@@ -19,13 +20,16 @@ function App(): JSX.Element {
         <Route
           path={AppRoute.Blog}
           element={<BlogPage />}
-        >
-          <Route path=':id' element={<Page404 />} />
-        </Route>
+        />
 
         <Route
           path={AppRoute.Events}
           element={<EventsPage />}
+        />
+
+        <Route
+          path={AppRoute.About}
+          element={<AboutPage />}
         />
 
         <Route
